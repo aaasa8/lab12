@@ -10,7 +10,8 @@ class MainActivity : AppCompatActivity() {
 			binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 			binding.button.setOnClickListener{
-				
+				val intent = Intent(this, TestActivity::class.java)
+				startActivity(intent)
 			}
     }
 }
