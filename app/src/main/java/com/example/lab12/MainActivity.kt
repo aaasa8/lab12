@@ -10,7 +10,9 @@ class MainActivity : AppCompatActivity() {
 			binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 			binding.button.setOnClickListener{
-				val intent = Intent(this, TestActivity::class.java)
+				val intent = Intent(this, DetailActivity::class.java) //명시적
+				intent.putExtra("greeting", "Hello!!!")
+				//val intent = Intent(Intent.ACTION_VIEW, Uri. parse("https://www.google.com"))
 				startActivity(intent)
 			}
     }
