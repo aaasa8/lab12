@@ -9,5 +9,8 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 			binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+			val greeting = intent.getStringExtra("greeting")
+			binding.tvText.text = greeting
     }
 }
